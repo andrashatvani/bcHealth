@@ -3,17 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0111B7391F44C08D006F9C44 /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0111B7381F44C08D006F9C44 /* ParseError.swift */; };
+		0111B7501F4589E1006F9C44 /* trackLists in Resources */ = {isa = PBXBuildFile; fileRef = 0111B74D1F458878006F9C44 /* trackLists */; };
 		014A9A8A1EEAEFAE0096650F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9A891EEAEFAE0096650F /* AppDelegate.swift */; };
-		014A9A8C1EEAEFAE0096650F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9A8B1EEAEFAE0096650F /* ViewController.swift */; };
 		014A9A8F1EEAEFAE0096650F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014A9A8D1EEAEFAE0096650F /* Main.storyboard */; };
 		014A9A911EEAEFAE0096650F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014A9A901EEAEFAE0096650F /* Assets.xcassets */; };
 		014A9A941EEAEFAE0096650F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014A9A921EEAEFAE0096650F /* LaunchScreen.storyboard */; };
-		014A9A9F1EEAEFAE0096650F /* bcHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9A9E1EEAEFAE0096650F /* bcHealthTests.swift */; };
+		014A9A9F1EEAEFAE0096650F /* ParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9A9E1EEAEFAE0096650F /* ParserSpec.swift */; };
 		014A9AAA1EEAEFAF0096650F /* bcHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9AA91EEAEFAF0096650F /* bcHealthUITests.swift */; };
+		014A9AB81EEAF1240096650F /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A9AB71EEAF1240096650F /* Downloader.swift */; };
+		0189FE551EEC073100A2C4F8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0189FE541EEC073100A2C4F8 /* TableViewController.swift */; };
+		0189FE571EEC34AA00A2C4F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0189FE561EEC34AA00A2C4F8 /* ViewController.swift */; };
+		0189FE591EEC7D1700A2C4F8 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0189FE581EEC7D1700A2C4F8 /* Track.swift */; };
+		0189FE5B1EEC80DE00A2C4F8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0189FE5A1EEC80DE00A2C4F8 /* Parser.swift */; };
+		0189FE631EED203A00A2C4F8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0189FE621EED203A00A2C4F8 /* Podfile */; };
+		0F90991F56C7D38889DDC9E7 /* Pods_bcHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A3143248D0F3B3D16751ED /* Pods_bcHealthTests.framework */; };
+		47DD283091FA20966A83134E /* Pods_bcHealth_bcHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C5707D8E61C9FEE187F6D7 /* Pods_bcHealth_bcHealthUITests.framework */; };
+		5C10AA3B12D0B404ADAF2DDD /* Pods_bcHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8ACB4318C159372182951E /* Pods_bcHealthUITests.framework */; };
+		B053AF8DD07CE50FED87074C /* Pods_bcHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74277889A77F4C1E2E8A39D4 /* Pods_bcHealth.framework */; };
+		D4718EE658E995998DCB6A64 /* Pods_bcHealth_bcHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5980495611AC3D963A6C91 /* Pods_bcHealth_bcHealthTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +46,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0111B7361F443112006F9C44 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Pods/../build/Debug-iphoneos/Quick/Quick.framework"; sourceTree = "<group>"; };
+		0111B7381F44C08D006F9C44 /* ParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
+		0111B74D1F458878006F9C44 /* trackLists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = trackLists; sourceTree = "<group>"; };
 		014A9A861EEAEFAE0096650F /* bcHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bcHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		014A9A891EEAEFAE0096650F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		014A9A8B1EEAEFAE0096650F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		014A9A8E1EEAEFAE0096650F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		014A9A901EEAEFAE0096650F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		014A9A931EEAEFAE0096650F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		014A9A951EEAEFAE0096650F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014A9A9A1EEAEFAE0096650F /* bcHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bcHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		014A9A9E1EEAEFAE0096650F /* bcHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bcHealthTests.swift; sourceTree = "<group>"; };
+		014A9A9E1EEAEFAE0096650F /* ParserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserSpec.swift; sourceTree = "<group>"; };
 		014A9AA01EEAEFAE0096650F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014A9AA51EEAEFAF0096650F /* bcHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bcHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		014A9AA91EEAEFAF0096650F /* bcHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bcHealthUITests.swift; sourceTree = "<group>"; };
 		014A9AAB1EEAEFAF0096650F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		014A9AB71EEAF1240096650F /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		0189FE541EEC073100A2C4F8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0189FE561EEC34AA00A2C4F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0189FE581EEC7D1700A2C4F8 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		0189FE5A1EEC80DE00A2C4F8 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		0189FE601EED1C5C00A2C4F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0189FE611EED1C6300A2C4F8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0189FE621EED203A00A2C4F8 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		50C4A467FB660ECDD8D0B4F3 /* Pods-bcHealth-bcHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealth-bcHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealth-bcHealthTests/Pods-bcHealth-bcHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		53A3143248D0F3B3D16751ED /* Pods_bcHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bcHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54C5707D8E61C9FEE187F6D7 /* Pods_bcHealth_bcHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bcHealth_bcHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74277889A77F4C1E2E8A39D4 /* Pods_bcHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bcHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87CA2292C63F24BB2E03125E /* Pods-bcHealth-bcHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealth-bcHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealth-bcHealthTests/Pods-bcHealth-bcHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A6C0D461F4B5E54F62E3947 /* Pods-bcHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealthUITests/Pods-bcHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA9BF1A64EAA10D75D5A6F7B /* Pods-bcHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealth/Pods-bcHealth.release.xcconfig"; sourceTree = "<group>"; };
+		BD563FE79C03491C1D666CAF /* Pods-bcHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealthUITests/Pods-bcHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4AE68724FB9F9DDBB12EC22 /* Pods-bcHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealthTests/Pods-bcHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		D9E5323DAC02ED0D3220FC70 /* Pods-bcHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealth/Pods-bcHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		DA5980495611AC3D963A6C91 /* Pods_bcHealth_bcHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bcHealth_bcHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE353A697DABFC33087B1D5 /* Pods-bcHealth-bcHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealth-bcHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealth-bcHealthUITests/Pods-bcHealth-bcHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE2B03D1337F0489221A085F /* Pods-bcHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealthTests/Pods-bcHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE8ACB4318C159372182951E /* Pods_bcHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bcHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCF079A63416ED2DAC226B7 /* Pods-bcHealth-bcHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bcHealth-bcHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-bcHealth-bcHealthUITests/Pods-bcHealth-bcHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B053AF8DD07CE50FED87074C /* Pods_bcHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F90991F56C7D38889DDC9E7 /* Pods_bcHealthTests.framework in Frameworks */,
+				D4718EE658E995998DCB6A64 /* Pods_bcHealth_bcHealthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C10AA3B12D0B404ADAF2DDD /* Pods_bcHealthUITests.framework in Frameworks */,
+				47DD283091FA20966A83134E /* Pods_bcHealth_bcHealthUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +119,13 @@
 		014A9A7D1EEAEFAE0096650F = {
 			isa = PBXGroup;
 			children = (
+				0189FE621EED203A00A2C4F8 /* Podfile */,
 				014A9A881EEAEFAE0096650F /* bcHealth */,
 				014A9A9D1EEAEFAE0096650F /* bcHealthTests */,
 				014A9AA81EEAEFAF0096650F /* bcHealthUITests */,
 				014A9A871EEAEFAE0096650F /* Products */,
+				0189FE5F1EED1C5B00A2C4F8 /* Frameworks */,
+				A064A8233E3BCA4CF1123E71 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +142,17 @@
 		014A9A881EEAEFAE0096650F /* bcHealth */ = {
 			isa = PBXGroup;
 			children = (
-				014A9A891EEAEFAE0096650F /* AppDelegate.swift */,
-				014A9A8B1EEAEFAE0096650F /* ViewController.swift */,
 				014A9A8D1EEAEFAE0096650F /* Main.storyboard */,
 				014A9A901EEAEFAE0096650F /* Assets.xcassets */,
 				014A9A921EEAEFAE0096650F /* LaunchScreen.storyboard */,
 				014A9A951EEAEFAE0096650F /* Info.plist */,
+				014A9A891EEAEFAE0096650F /* AppDelegate.swift */,
+				014A9AB71EEAF1240096650F /* Downloader.swift */,
+				0189FE541EEC073100A2C4F8 /* TableViewController.swift */,
+				0189FE561EEC34AA00A2C4F8 /* ViewController.swift */,
+				0189FE581EEC7D1700A2C4F8 /* Track.swift */,
+				0189FE5A1EEC80DE00A2C4F8 /* Parser.swift */,
+				0111B7381F44C08D006F9C44 /* ParseError.swift */,
 			);
 			path = bcHealth;
 			sourceTree = "<group>";
@@ -110,7 +160,8 @@
 		014A9A9D1EEAEFAE0096650F /* bcHealthTests */ = {
 			isa = PBXGroup;
 			children = (
-				014A9A9E1EEAEFAE0096650F /* bcHealthTests.swift */,
+				0111B74D1F458878006F9C44 /* trackLists */,
+				014A9A9E1EEAEFAE0096650F /* ParserSpec.swift */,
 				014A9AA01EEAEFAE0096650F /* Info.plist */,
 			);
 			path = bcHealthTests;
@@ -125,6 +176,38 @@
 			path = bcHealthUITests;
 			sourceTree = "<group>";
 		};
+		0189FE5F1EED1C5B00A2C4F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0111B7361F443112006F9C44 /* Quick.framework */,
+				0189FE611EED1C6300A2C4F8 /* WebKit.framework */,
+				0189FE601EED1C5C00A2C4F8 /* UIKit.framework */,
+				74277889A77F4C1E2E8A39D4 /* Pods_bcHealth.framework */,
+				53A3143248D0F3B3D16751ED /* Pods_bcHealthTests.framework */,
+				EE8ACB4318C159372182951E /* Pods_bcHealthUITests.framework */,
+				DA5980495611AC3D963A6C91 /* Pods_bcHealth_bcHealthTests.framework */,
+				54C5707D8E61C9FEE187F6D7 /* Pods_bcHealth_bcHealthUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A064A8233E3BCA4CF1123E71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9E5323DAC02ED0D3220FC70 /* Pods-bcHealth.debug.xcconfig */,
+				BA9BF1A64EAA10D75D5A6F7B /* Pods-bcHealth.release.xcconfig */,
+				DE2B03D1337F0489221A085F /* Pods-bcHealthTests.debug.xcconfig */,
+				D4AE68724FB9F9DDBB12EC22 /* Pods-bcHealthTests.release.xcconfig */,
+				BD563FE79C03491C1D666CAF /* Pods-bcHealthUITests.debug.xcconfig */,
+				9A6C0D461F4B5E54F62E3947 /* Pods-bcHealthUITests.release.xcconfig */,
+				87CA2292C63F24BB2E03125E /* Pods-bcHealth-bcHealthTests.debug.xcconfig */,
+				50C4A467FB660ECDD8D0B4F3 /* Pods-bcHealth-bcHealthTests.release.xcconfig */,
+				DDE353A697DABFC33087B1D5 /* Pods-bcHealth-bcHealthUITests.debug.xcconfig */,
+				FFCF079A63416ED2DAC226B7 /* Pods-bcHealth-bcHealthUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 014A9AAE1EEAEFAF0096650F /* Build configuration list for PBXNativeTarget "bcHealth" */;
 			buildPhases = (
+				F3C24C20019DEE906016A0A6 /* [CP] Check Pods Manifest.lock */,
 				014A9A821EEAEFAE0096650F /* Sources */,
 				014A9A831EEAEFAE0096650F /* Frameworks */,
 				014A9A841EEAEFAE0096650F /* Resources */,
+				03291322EDFE0C7338D714C2 /* [CP] Embed Pods Frameworks */,
+				7EBBD38ED017FAC13B510871 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 014A9AB11EEAEFAF0096650F /* Build configuration list for PBXNativeTarget "bcHealthTests" */;
 			buildPhases = (
+				2F7CC35E76C9641B7361EBE9 /* [CP] Check Pods Manifest.lock */,
 				014A9A961EEAEFAE0096650F /* Sources */,
 				014A9A971EEAEFAE0096650F /* Frameworks */,
 				014A9A981EEAEFAE0096650F /* Resources */,
+				E55F407DDBFC86592C50E3E8 /* [CP] Embed Pods Frameworks */,
+				FCD0D269125EF729575A069E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 014A9AB41EEAEFAF0096650F /* Build configuration list for PBXNativeTarget "bcHealthUITests" */;
 			buildPhases = (
+				1EA3D36068DBBD74029585AA /* [CP] Check Pods Manifest.lock */,
 				014A9AA11EEAEFAF0096650F /* Sources */,
 				014A9AA21EEAEFAF0096650F /* Frameworks */,
 				014A9AA31EEAEFAF0096650F /* Resources */,
+				5BEAAE2450D9495F46D56BD0 /* [CP] Embed Pods Frameworks */,
+				B4D0AABBB137384B440183AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,7 +300,7 @@
 				};
 			};
 			buildConfigurationList = 014A9A811EEAEFAE0096650F /* Build configuration list for PBXProject "bcHealth" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -234,6 +326,7 @@
 			files = (
 				014A9A941EEAEFAE0096650F /* LaunchScreen.storyboard in Resources */,
 				014A9A911EEAEFAE0096650F /* Assets.xcassets in Resources */,
+				0189FE631EED203A00A2C4F8 /* Podfile in Resources */,
 				014A9A8F1EEAEFAE0096650F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0111B7501F4589E1006F9C44 /* trackLists in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +348,178 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03291322EDFE0C7338D714C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bcHealth/Pods-bcHealth-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bcHealth/Pods-bcHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EA3D36068DBBD74029585AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bcHealthUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F7CC35E76C9641B7361EBE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bcHealthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BEAAE2450D9495F46D56BD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bcHealthUITests/Pods-bcHealthUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bcHealthUITests/Pods-bcHealthUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EBBD38ED017FAC13B510871 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bcHealth/Pods-bcHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4D0AABBB137384B440183AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bcHealthUITests/Pods-bcHealthUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E55F407DDBFC86592C50E3E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bcHealthTests/Pods-bcHealthTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bcHealthTests/Pods-bcHealthTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3C24C20019DEE906016A0A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bcHealth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD0D269125EF729575A069E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bcHealthTests/Pods-bcHealthTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		014A9A821EEAEFAE0096650F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014A9A8C1EEAEFAE0096650F /* ViewController.swift in Sources */,
 				014A9A8A1EEAEFAE0096650F /* AppDelegate.swift in Sources */,
+				0111B7391F44C08D006F9C44 /* ParseError.swift in Sources */,
+				0189FE591EEC7D1700A2C4F8 /* Track.swift in Sources */,
+				0189FE5B1EEC80DE00A2C4F8 /* Parser.swift in Sources */,
+				014A9AB81EEAF1240096650F /* Downloader.swift in Sources */,
+				0189FE571EEC34AA00A2C4F8 /* ViewController.swift in Sources */,
+				0189FE551EEC073100A2C4F8 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014A9A9F1EEAEFAE0096650F /* bcHealthTests.swift in Sources */,
+				014A9A9F1EEAEFAE0096650F /* ParserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +599,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -391,6 +651,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -412,8 +673,11 @@
 		};
 		014A9AAF1EEAEFAF0096650F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9E5323DAC02ED0D3220FC70 /* Pods-bcHealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L39AT832M7;
 				INFOPLIST_FILE = bcHealth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashatvani.bcHealth;
@@ -424,8 +688,11 @@
 		};
 		014A9AB01EEAEFAF0096650F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9BF1A64EAA10D75D5A6F7B /* Pods-bcHealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L39AT832M7;
 				INFOPLIST_FILE = bcHealth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashatvani.bcHealth;
@@ -436,9 +703,12 @@
 		};
 		014A9AB21EEAEFAF0096650F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE2B03D1337F0489221A085F /* Pods-bcHealthTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = bcHealthTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashatvani.bcHealthTests;
@@ -450,9 +720,12 @@
 		};
 		014A9AB31EEAEFAF0096650F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4AE68724FB9F9DDBB12EC22 /* Pods-bcHealthTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = bcHealthTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashatvani.bcHealthTests;
@@ -464,8 +737,8 @@
 		};
 		014A9AB51EEAEFAF0096650F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD563FE79C03491C1D666CAF /* Pods-bcHealthUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = bcHealthUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashatvani.bcHealthUITests;
@@ -477,8 +750,8 @@
 		};
 		014A9AB61EEAEFAF0096650F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6C0D461F4B5E54F62E3947 /* Pods-bcHealthUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = bcHealthUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashatvani.bcHealthUITests;
@@ -507,6 +780,7 @@
 				014A9AB01EEAEFAF0096650F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		014A9AB11EEAEFAF0096650F /* Build configuration list for PBXNativeTarget "bcHealthTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +789,7 @@
 				014A9AB31EEAEFAF0096650F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		014A9AB41EEAEFAF0096650F /* Build configuration list for PBXNativeTarget "bcHealthUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +798,7 @@
 				014A9AB61EEAEFAF0096650F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

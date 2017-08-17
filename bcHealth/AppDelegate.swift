@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  bcHealth
-//
-//  Created by Andras on 09/06/2017.
-//  Copyright © 2017 Andras Hatvani. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

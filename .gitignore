@@ -16,6 +16,11 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+*.xcodeproj/
+*.xcodeproj/*
+bcHealth.xcodeproj/
+*.pbxproj
+*.xcworkspace
 
 ## Other
 *.moved-aside
@@ -46,3 +51,5 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+Package.resolved
+Package.pins
