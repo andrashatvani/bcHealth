@@ -1,0 +1,1295 @@
+<html lang="en" ng-app="bc-dashboard" class="no-js ng-scope"><!--<![endif]--><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Bike Citizens Dashboard</title>
+            <meta name="description" content="Bike Citizens User Dashboard">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <base href="/">
+                        
+                        <link rel="stylesheet" media="all" href="/assets/application-8de8d4e06b278adcef0c328fed4aa8af.css">
+                            <script src="/assets/application-8d6dc3d7391c8838f546afb16853bc54.js"></script>
+</head>
+<body ng-controller="ApplicationCtrl" class="ng-scope">
+    <!--[if lt IE 7]>
+     <p class="alert alert-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+     <![endif]-->
+    
+    <script>
+        angular.module('bc-preloaded', []);
+        angular.module('bc-preloaded').constant('current_user', {
+                                                "id": "59259",
+                                                "api_key": Cookies.get('api_key'),
+                                                "username": "andras.hatvani",
+                                                "email": "andras.hatvani@gmail.com"
+                                                });
+        </script>
+    
+    <script>
+        angular.module('bc-preloaded').constant('BC_CITIES', {
+                                                "nl-shertogenbosch": { "name": "&#39;s-Hertogenbosch" },
+                                                "es-acoruna": { "name": "A Coruña" },
+                                                "de-aachen": { "name": "Aachen" },
+                                                "gb-aberdeen": { "name": "Aberdeen" },
+                                                "gb-accrington": { "name": "Accrington" },
+                                                "au-adelaide": { "name": "Adelaide" },
+                                                "fr-aixenprovence": { "name": "Aix-en-Provence" },
+                                                "es-albacete": { "name": "Albacete" },
+                                                "us-albuquerque": { "name": "Albuquerque" },
+                                                "us-alexandria": { "name": "Alexandria" },
+                                                "es-algeciras": { "name": "Algeciras" },
+                                                "es-alicante": { "name": "Alicante" },
+                                                "nl-almere": { "name": "Almere" },
+                                                "es-almeria": { "name": "Almería" },
+                                                "nl-amersfoort": { "name": "Amersfoort" },
+                                                "fr-amiens": { "name": "Amiens" },
+                                                "nl-amsterdam": { "name": "Amsterdam" },
+                                                "fr-angers": { "name": "Angers" },
+                                                "be-antwerpen": { "name": "Antwerpen" },
+                                                "nl-apeldoorn": { "name": "Apeldoorn" },
+                                                "nl-arnhem": { "name": "Arnhem" },
+                                                "us-atlanta": { "name": "Atlanta" },
+                                                "de-augsburg": { "name": "Augsburg" },
+                                                "us-austin": { "name": "Austin" },
+                                                "es-badajoz": { "name": "Badajoz" },
+                                                "us-baltimore": { "name": "Baltimore" },
+                                                "es-barcelona": { "name": "Barcelona" },
+                                                "it-bari": { "name": "Bari" },
+                                                "gb-barnsley": { "name": "Barnsley" },
+                                                "ch-basel": { "name": "Basel" },
+                                                "gb-basildon": { "name": "Basildon" },
+                                                "us-bayareanorth": { "name": "Bay Area north" },
+                                                "us-bayareasouth": { "name": "Bay Area south" },
+                                                "gb-belfast": { "name": "Belfast" },
+                                                "it-bergamo": { "name": "Bergamo" },
+                                                "no-bergen": { "name": "Bergen" },
+                                                "de-bergischgladbach": { "name": "Bergisch Gladbach" },
+                                                "de-berlin": { "name": "Berlin" },
+                                                "ch-bern": { "name": "Bern" },
+                                                "fr-besancon": { "name": "Besançon" },
+                                                "de-bielefeld": { "name": "Bielefeld" },
+                                                "es-bilbao": { "name": "Bilbao" },
+                                                "gb-birmingham": { "name": "Birmingham" },
+                                                "gb-blackburn": { "name": "Blackburn" },
+                                                "gb-blackpool": { "name": "Blackpool" },
+                                                "de-bochum": { "name": "Bochum" },
+                                                "us-boise": { "name": "Boise" },
+                                                "it-bologna": { "name": "Bologna" },
+                                                "de-bonn": { "name": "Bonn" },
+                                                "se-bors": { "name": "Borås" },
+                                                "fr-bordeaux": { "name": "Bordeaux" },
+                                                "dk-bornholm": { "name": "Bornholm" },
+                                                "us-boston": { "name": "Boston" },
+                                                "de-bottrop": { "name": "Bottrop" },
+                                                "gb-bournemouth": { "name": "Bournemouth" },
+                                                "it-bozen": { "name": "Bozen" },
+                                                "sk-bratislava": { "name": "Bratislava" },
+                                                "de-brunswick": { "name": "Braunschweig" },
+                                                "nl-breda": { "name": "Breda" },
+                                                "at-bregenz": { "name": "Bregenz" },
+                                                "de-bremen": { "name": "Bremen" },
+                                                "it-brescia": { "name": "Brescia" },
+                                                "fr-brest": { "name": "Brest" },
+                                                "gb-brighton": { "name": "Brighton" },
+                                                "au-brisbane": { "name": "Brisbane" },
+                                                "gb-bristol": { "name": "Bristol" },
+                                                "cz-brno": { "name": "Brno" },
+                                                "be-brugge": { "name": "Brugge" },
+                                                "be-brussels": { "name": "Brussels" },
+                                                "ro-bucharest": { "name": "București" },
+                                                "hu-budapest": { "name": "Budapest" },
+                                                "at-burgenland": { "name": "Burgenland" },
+                                                "es-burgos": { "name": "Burgos" },
+                                                "gb-burnley": { "name": "Burnley" },
+                                                "pl-bydgoszcz": { "name": "Bydgoszcz" },
+                                                "es-cadiz": { "name": "Cádiz" },
+                                                "fr-caen": { "name": "Caen" },
+                                                "au-cairns": { "name": "Cairns" },
+                                                "gb-cambridge": { "name": "Cambridge" },
+                                                "us-cambridge": { "name": "Cambridge" },
+                                                "au-canberra": { "name": "Canberra" },
+                                                "gb-cardiff": { "name": "Cardiff" },
+                                                "at-carinthia": { "name": "Carinthia" },
+                                                "es-cartagena": { "name": "Cartagena" },
+                                                "it-castedducagliari": { "name": "Casteddu/Cagliari" },
+                                                "es-castellondelaplana": { "name": "Castellón de la Plana / Castelló de la Plana" },
+                                                "it-catania": { "name": "Catania" },
+                                                "be-charleroi": { "name": "Charleroi" },
+                                                "us-charlotte": { "name": "Charlotte" },
+                                                "us-chattanooga": { "name": "Chattanooga" },
+                                                "de-chemnitz": { "name": "Chemnitz" },
+                                                "us-chicago": { "name": "Chicago" },
+                                                "us-cincinnati": { "name": "Cincinnati" },
+                                                "mx-mexicocity": { "name": "Ciudad de México" },
+                                                "fr-clermontferrand": { "name": "Clermont-Ferrand" },
+                                                "us-cleveland": { "name": "Cleveland" },
+                                                "us-columbia": { "name": "Columbia" },
+                                                "us-columbus": { "name": "Columbus" },
+                                                "dk-copenhagen": { "name": "Copenhagen" },
+                                                "es-cordoba": { "name": "Córdoba" },
+                                                "gb-coventry": { "name": "Coventry" },
+                                                "gb-crawley": { "name": "Crawley" },
+                                                "br-curitiba": { "name": "Curitiba" },
+                                                "us-dallas": { "name": "Dallas" },
+                                                "de-darmstadt": { "name": "Darmstadt" },
+                                                "au-darwin": { "name": "Darwin" },
+                                                "us-denver": { "name": "Denver" },
+                                                "gb-derby": { "name": "Derby" },
+                                                "us-detroit": { "name": "Detroit" },
+                                                "nl-deventer": { "name": "Deventer" },
+                                                "fr-dijon": { "name": "Dijon" },
+                                                "gb-doncaster": { "name": "Doncaster" },
+                                                "es-donostiasansebastian": { "name": "Donostia-San Sebastián" },
+                                                "nl-dordrecht": { "name": "Dordrecht" },
+                                                "de-dortmund": { "name": "Dortmund" },
+                                                "de-dresden": { "name": "Dresden" },
+                                                "ie-dublin": { "name": "Dublin" },
+                                                "de-duesseldorf": { "name": "Duesseldorf" },
+                                                "de-duisburg": { "name": "Duisburg" },
+                                                "gb-dundee": { "name": "Dundee" },
+                                                "gb-edinburgh": { "name": "Edinburgh" },
+                                                "nl-eindhoven": { "name": "Eindhoven" },
+                                                "at-eisenstadt": { "name": "Eisenstadt" },
+                                                "nl-enschede": { "name": "Enschede" },
+                                                "de-erfurt": { "name": "Erfurt" },
+                                                "se-eskilstuna": { "name": "Eskilstuna" },
+                                                "de-essen": { "name": "Essen" },
+                                                "us-eugene": { "name": "Eugene" },
+                                                "gb-farnborough": { "name": "Farnborough" },
+                                                "it-ferrara": { "name": "Ferrara" },
+                                                "it-florence": { "name": "Firenze" },
+                                                "it-foggia": { "name": "Foggia" },
+                                                "it-forli": { "name": "Forlì" },
+                                                "us-fortcollins": { "name": "Fort Collins" },
+                                                "de-frankfurt": { "name": "Frankfurt" },
+                                                "de-freiburg": { "name": "Freiburg" },
+                                                "de-friedrichshafen": { "name": "Friedrichshafen" },
+                                                "us-gainesville": { "name": "Gainesville" },
+                                                "se-gavle": { "name": "Gävle" },
+                                                "au-geelong": { "name": "Geelong" },
+                                                "de-gelsenkirchen": { "name": "Gelsenkirchen" },
+                                                "ch-geneva": { "name": "Geneva" },
+                                                "it-genoa": { "name": "Genova" },
+                                                "be-gent": { "name": "Gent" },
+                                                "es-gijon": { "name": "Gijón/Xixón" },
+                                                "gb-gillingham": { "name": "Gillingham" },
+                                                "gb-glasgow": { "name": "Glasgow" },
+                                                "gb-gloucester": { "name": "Gloucester" },
+                                                "au-goldcoast": { "name": "Gold Coast" },
+                                                "au-gosford": { "name": "Gosford" },
+                                                "se-gothenburg": { "name": "Göteborg" },
+                                                "de-goettingen": { "name": "Göttingen" },
+                                                "es-granada": { "name": "Granada" },
+                                                "us-grandrapids": { "name": "Grand Rapids" },
+                                                "at-graz": { "name": "Graz" },
+                                                "fr-grenoble": { "name": "Grenoble" },
+                                                "gb-grimbsy": { "name": "Grimbsy" },
+                                                "nl-groningen": { "name": "Groningen" },
+                                                "nl-haarlem": { "name": "Haarlem" },
+                                                "de-hagen": { "name": "Hagen" },
+                                                "de-hallesaale": { "name": "Halle (Saale)" },
+                                                "se-halmstad": { "name": "Halmstad" },
+                                                "de-hamburg": { "name": "Hamburg" },
+                                                "de-hamm": { "name": "Hamm" },
+                                                "de-hannover": { "name": "Hannover" },
+                                                "gb-hastings": { "name": "Hastings" },
+                                                "de-heidelberg": { "name": "Heidelberg" },
+                                                "de-heilbronn": { "name": "Heilbronn" },
+                                                "se-helsingborg": { "name": "Helsingborg" },
+                                                "fi-helsinki": { "name": "Helsinki" },
+                                                "de-herne": { "name": "Herne" },
+                                                "gb-highwycombe": { "name": "High Wycombe" },
+                                                "au-hobart": { "name": "Hobart" },
+                                                "us-honolulu": { "name": "Honolulu" },
+                                                "us-houston": { "name": "Houston" },
+                                                "es-huelva": { "name": "Huelva" },
+                                                "us-indianapolis": { "name": "Indianapolis" },
+                                                "de-ingolstadt": { "name": "Ingolstadt" },
+                                                "at-innsbruck": { "name": "Innsbruck" },
+                                                "gb-ipswich": { "name": "Ipswich" },
+                                                "tr-istanbul": { "name": "İstanbul" },
+                                                "es-jaen": { "name": "Jaén" },
+                                                "de-jena": { "name": "Jena" },
+                                                "es-jerez": { "name": "Jerez de la Frontera" },
+                                                "se-jonkoping": { "name": "Jönköping" },
+                                                "us-kansascity": { "name": "Kansas City" },
+                                                "de-karlsruhe": { "name": "Karlsruhe" },
+                                                "se-karlstad": { "name": "Karlstad" },
+                                                "de-kassel": { "name": "Kassel" },
+                                                "de-kiel": { "name": "Kiel" },
+                                                "gb-kingstonuponhull": { "name": "Kingston upon Hull" },
+                                                "gb-kingstonuponthames": { "name": "Kingston upon Thames" },
+                                                "at-klagenfurt": { "name": "Klagenfurt" },
+                                                "de-koblenz": { "name": "Koblenz" },
+                                                "de-koeln": { "name": "Köln" },
+                                                "pl-krakow": { "name": "Kraków" },
+                                                "de-krefeld": { "name": "Krefeld" },
+                                                "fr-larochelle": { "name": "La Rochelle" },
+                                                "es-laspalmasdegrancanaria": { "name": "Las Palmas de Gran Canaria" },
+                                                "us-lasvegas": { "name": "Las Vegas" },
+                                                "it-latina": { "name": "Latina" },
+                                                "ch-lausanne": { "name": "Lausanne" },
+                                                "fr-lehavre": { "name": "Le Havre" },
+                                                "fr-lemans": { "name": "Le Mans" },
+                                                "gb-leeds": { "name": "Leeds" },
+                                                "gb-leicester": { "name": "Leicester" },
+                                                "nl-leiden": { "name": "Leiden" },
+                                                "de-leipzig": { "name": "Leipzig" },
+                                                "es-leon": { "name": "León" },
+                                                "be-liege": { "name": "Liège" },
+                                                "fr-lille": { "name": "Lille" },
+                                                "fr-limoges": { "name": "Limoges" },
+                                                "us-lincoln": { "name": "Lincoln" },
+                                                "se-linkoping": { "name": "Linköping" },
+                                                "at-linz": { "name": "Linz" },
+                                                "pt-lisbon": { "name": "Lisboa" },
+                                                "gb-liverpool": { "name": "Liverpool" },
+                                                "it-livorno": { "name": "Livorno" },
+                                                "si-ljubljana": { "name": "Ljubljana" },
+                                                "es-lleida": { "name": "Lleida" },
+                                                "pl-lodz": { "name": "Lodz" },
+                                                "es-logrono": { "name": "Logroño" },
+                                                "gb-london": { "name": "London" },
+                                                "us-losangeles": { "name": "Los Angeles" },
+                                                "us-louisville": { "name": "Louisville" },
+                                                "at-loweraustria": { "name": "Lower Austria" },
+                                                "de-luebeck": { "name": "Lübeck" },
+                                                "pl-lublin": { "name": "Lublin" },
+                                                "de-ludwigshafenamrhein": { "name": "Ludwigshafen am Rhein" },
+                                                "se-lund": { "name": "Lund" },
+                                                "gb-luton": { "name": "Luton" },
+                                                "lu-luxembourg": { "name": "Luxembourg" },
+                                                "ch-luzern": { "name": "Luzern" },
+                                                "fr-lyon": { "name": "Lyon" },
+                                                "nl-maastricht": { "name": "Maastricht" },
+                                                "us-madison": { "name": "Madison" },
+                                                "es-madrid": { "name": "Madrid" },
+                                                "de-magdeburg": { "name": "Magdeburg" },
+                                                "de-mainz": { "name": "Mainz" },
+                                                "es-malaga": { "name": "Málaga" },
+                                                "se-malmoe": { "name": "Malmö" },
+                                                "gb-manchester": { "name": "Manchester" },
+                                                "de-mannheim": { "name": "Mannheim" },
+                                                "gb-mansfield": { "name": "Mansfield" },
+                                                "si-maribor": { "name": "Maribor" },
+                                                "fr-marseille": { "name": "Marseille" },
+                                                "au-melbourne": { "name": "Melbourne" },
+                                                "it-messina": { "name": "Messina" },
+                                                "fr-metz": { "name": "Metz" },
+                                                "us-miami": { "name": "Miami" },
+                                                "gb-middlesbrough": { "name": "Middlesbrough" },
+                                                "it-milan": { "name": "Milano" },
+                                                "gb-miltonkeynes": { "name": "Milton Keynes" },
+                                                "us-milwaukee": { "name": "Milwaukee" },
+                                                "us-minneapolis": { "name": "Minneapolis" },
+                                                "it-modena": { "name": "Modena" },
+                                                "de-moenchengladbach": { "name": "Mönchengladbach" },
+                                                "fr-montpellier": { "name": "Montpellier" },
+                                                "it-monza": { "name": "Monza" },
+                                                "de-muelheim": { "name": "Mülheim" },
+                                                "fr-mulhouse": { "name": "Mulhouse" },
+                                                "de-munich": { "name": "München" },
+                                                "de-muenster": { "name": "Münster" },
+                                                "es-murcia": { "name": "Murcia" },
+                                                "be-namur": { "name": "Namur" },
+                                                "fr-nancy": { "name": "Nancy" },
+                                                "fr-nantes": { "name": "Nantes" },
+                                                "it-naples": { "name": "Napoli" },
+                                                "de-neuss": { "name": "Neuss" },
+                                                "au-newcastle": { "name": "New Castle" },
+                                                "us-neworleans": { "name": "New Orleans" },
+                                                "us-newyork": { "name": "New York" },
+                                                "gb-newcastle": { "name": "Newcastle" },
+                                                "gb-newport": { "name": "Newport" },
+                                                "fr-nice": { "name": "Nice" },
+                                                "nl-nijmegen": { "name": "Nijmegen" },
+                                                "fr-nimes": { "name": "Nîmes" },
+                                                "se-norrkoping": { "name": "Norrköping" },
+                                                "gb-northampton": { "name": "Northampton" },
+                                                "gb-norwich": { "name": "Norwich" },
+                                                "gb-nottingham": { "name": "Nottingham" },
+                                                "it-novara": { "name": "Novara" },
+                                                "de-nuernberg": { "name": "Nürnberg" },
+                                                "us-oakland": { "name": "Oakland" },
+                                                "de-oberhausen": { "name": "Oberhausen" },
+                                                "de-offenbachammain": { "name": "Offenbach am Main" },
+                                                "de-oldenburg": { "name": "Oldenburg" },
+                                                "se-orebro": { "name": "Örebro" },
+                                                "fr-orleans": { "name": "Orléans" },
+                                                "no-oslo": { "name": "Oslo" },
+                                                "de-osnabrueck": { "name": "Osnabrück" },
+                                                "es-ourense": { "name": "Ourense" },
+                                                "gb-oxford": { "name": "Oxford" },
+                                                "de-paderborn": { "name": "Paderborn" },
+                                                "it-padovese": { "name": "Padovese" },
+                                                "it-palermo": { "name": "Palermo" },
+                                                "es-palma": { "name": "Palma de Mallorca" },
+                                                "es-pamplona": { "name": "Pamplona/Iruña" },
+                                                "fr-paris": { "name": "Paris" },
+                                                "it-parma": { "name": "Parma" },
+                                                "fr-perpignan": { "name": "Perpignan" },
+                                                "au-perth": { "name": "Perth" },
+                                                "it-perugia": { "name": "Perugia" },
+                                                "it-pescara": { "name": "Pescara" },
+                                                "gb-peterborough": { "name": "Peterborough" },
+                                                "de-pforzheim": { "name": "Pforzheim" },
+                                                "us-philadelphia": { "name": "Philadelphia" },
+                                                "us-phoenix": { "name": "Phoenix" },
+                                                "us-pittsburgh": { "name": "Pittsburgh" },
+                                                "gb-plymouth": { "name": "Plymouth" },
+                                                "us-portland": { "name": "Portland" },
+                                                "pt-porto": { "name": "Porto" },
+                                                "gb-portsmouth": { "name": "Portsmouth" },
+                                                "de-potsdam": { "name": "Potsdam" },
+                                                "pl-poznan": { "name": "Poznan" },
+                                                "cz-prague": { "name": "Praha" },
+                                                "it-prato": { "name": "Prato" },
+                                                "gb-preston": { "name": "Preston" },
+                                                "it-ravenna": { "name": "Ravenna" },
+                                                "gb-reading": { "name": "Reading" },
+                                                "de-recklinghausen": { "name": "Recklinghausen" },
+                                                "de-regensburg": { "name": "Regensburg" },
+                                                "it-reggiodicalabria": { "name": "Reggio di Calabria" },
+                                                "fr-reims": { "name": "Reims" },
+                                                "fr-rennes": { "name": "Rennes" },
+                                                "de-reutlingen": { "name": "Reutlingen" },
+                                                "is-reykjavik": { "name": "Reykjavík" },
+                                                "lv-riga": { "name": "Riga" },
+                                                "it-rimini": { "name": "Rimini" },
+                                                "it-rome": { "name": "Roma" },
+                                                "de-rostock": { "name": "Rostock" },
+                                                "nl-rotterdam": { "name": "Rotterdam" },
+                                                "fr-rouen": { "name": "Rouen" },
+                                                "de-ruhrgebiet": { "name": "Ruhrgebiet" },
+                                                "de-saarbruecken": { "name": "Saarbrücken" },
+                                                "es-sabadell": { "name": "Sabadell" },
+                                                "us-sacramento": { "name": "Sacramento" },
+                                                "us-saintpaul": { "name": "Saint Paul" },
+                                                "fr-saintetienne": { "name": "Saint-Étienne" },
+                                                "es-salamanca": { "name": "Salamanca" },
+                                                "us-salem": { "name": "Salem" },
+                                                "it-salerno": { "name": "Salerno" },
+                                                "us-saltlakecity": { "name": "Salt Lake City" },
+                                                "at-salzburg": { "name": "Salzburg" },
+                                                "at-salzburgland": { "name": "Salzburg" },
+                                                "us-sanantonio": { "name": "San Antonio" },
+                                                "es-sancristobaldelalaguna": { "name": "San Cristóbal de La Laguna" },
+                                                "us-sandiego": { "name": "San Diego" },
+                                                "us-sanfrancisco": { "name": "San Francisco" },
+                                                "us-sanmateocounty": { "name": "San Mateo County" },
+                                                "at-sanktpoelten": { "name": "Sankt Pölten" },
+                                                "es-santacruzdetenerife": { "name": "Santa Cruz de Tenerife" },
+                                                "es-santander": { "name": "Santander" },
+                                                "ba-sarajevo": { "name": "Sarajevo" },
+                                                "it-sassari": { "name": "Sassari" },
+                                                "se-scania": { "name": "Scania" },
+                                                "us-scottsdale": { "name": "Scottsdale" },
+                                                "us-seattle": { "name": "Seattle" },
+                                                "es-seville": { "name": "Seville" },
+                                                "gb-sheffield": { "name": "Sheffield" },
+                                                "sg-singapore": { "name": "Singapore" },
+                                                "it-siracusa": { "name": "Siracusa" },
+                                                "pl-slask": { "name": "Slask" },
+                                                "gb-slough": { "name": "Slough" },
+                                                "se-sodertalje": { "name": "Södertälje" },
+                                                "de-solingen": { "name": "Solingen" },
+                                                "gb-southampton": { "name": "Southampton" },
+                                                "se-stockholm": { "name": "Stockholm" },
+                                                "gb-stokeontrent": { "name": "Stoke-on-Trent" },
+                                                "fr-strasbourg": { "name": "Strasbourg" },
+                                                "de-stuttgart": { "name": "Stuttgart" },
+                                                "at-styria": { "name": "Styria" },
+                                                "se-sundsvall": { "name": "Sundsvall" },
+                                                "au-sunshinecoast": { "name": "Sunshine Coast" },
+                                                "gb-swansea": { "name": "Swansea" },
+                                                "gb-swindon": { "name": "Swindon" },
+                                                "au-sydney": { "name": "Sydney" },
+                                                "pl-szczecin": { "name": "Szczecin" },
+                                                "se-taby": { "name": "Täby" },
+                                                "tw-taipei": { "name": "Taipeh" },
+                                                "us-tallahassee": { "name": "Tallahassee" },
+                                                "ee-tallinn": { "name": "Tallinn" },
+                                                "us-tampa": { "name": "Tampa" },
+                                                "it-taranto": { "name": "Taranto" },
+                                                "es-tarragona": { "name": "Tarragona" },
+                                                "il-telaviv": { "name": "Tel Aviv" },
+                                                "gb-telford": { "name": "Telford" },
+                                                "us-tempe": { "name": "Tempe" },
+                                                "it-terni": { "name": "Terni" },
+                                                "es-terrassa": { "name": "Terrassa" },
+                                                "nl-denhaag": { "name": "The Hague" },
+                                                "us-thousandoaks": { "name": "Thousand Oaks" },
+                                                "nl-tilburg": { "name": "Tilburg" },
+                                                "al-tirana": { "name": "Tirana" },
+                                                "au-toowoomba": { "name": "Toowoomba" },
+                                                "it-turin": { "name": "Torino" },
+                                                "fr-toulon": { "name": "Toulon" },
+                                                "fr-toulouse": { "name": "Toulouse" },
+                                                "fr-tours": { "name": "Tours" },
+                                                "au-townsville": { "name": "Townsville" },
+                                                "it-trento": { "name": "Trento" },
+                                                "de-trier": { "name": "Trier" },
+                                                "it-triest": { "name": "Trieste" },
+                                                "pl-trojmiasto": { "name": "Trojmiasto" },
+                                                "us-tucson": { "name": "Tucson" },
+                                                "at-tyrol": { "name": "Tyrol" },
+                                                "de-ulm": { "name": "Ulm" },
+                                                "se-ume": { "name": "Umeå" },
+                                                "at-upperaustria": { "name": "Upper Austria" },
+                                                "se-uppsala": { "name": "Uppsala" },
+                                                "nl-utrecht": { "name": "Utrecht" },
+                                                "es-valencia": { "name": "Valencia" },
+                                                "es-valladolid": { "name": "Valladolid" },
+                                                "se-vasters": { "name": "Västerås" },
+                                                "se-vaxjo": { "name": "Växjö" },
+                                                "it-venice": { "name": "Venezia" },
+                                                "it-verona": { "name": "Verona" },
+                                                "es-vigo": { "name": "Vigo" },
+                                                "es-vitoriagasteiz": { "name": "Vitoria-Gasteiz" },
+                                                "at-vorarlberg": { "name": "Vorarlberg" },
+                                                "gb-warrington": { "name": "Warrington" },
+                                                "pl-warsaw": { "name": "Warsaw" },
+                                                "us-washington": { "name": "Washington" },
+                                                "at-vienna": { "name": "Wien" },
+                                                "de-wiesbaden": { "name": "Wiesbaden" },
+                                                "gb-wigan": { "name": "Wigan" },
+                                                "ch-winterthurcity": { "name": "Winterthur" },
+                                                "de-wolfsburg": { "name": "Wolfsburg" },
+                                                "au-wollongong": { "name": "Wollongong" },
+                                                "pl-wroclaw": { "name": "Wroclaw" },
+                                                "de-wuppertal": { "name": "Wuppertal" },
+                                                "de-wuerzburg": { "name": "Würzburg" },
+                                                "gb-york": { "name": "York" },
+                                                "nl-zaanstad": { "name": "Zaanstad" },
+                                                "hr-zagreb": { "name": "Zagreb" },
+                                                "es-zaragoza": { "name": "Zaragoza" },
+                                                "nl-zoetermeer": { "name": "Zoetermeer" },
+                                                "ch-zurich": { "name": "Zurich" },
+                                                "nl-zwolle": { "name": "Zwolle" },
+                                                "gr-athens": { "name": "Αθήνα" },
+                                                "rs-belgrade": { "name": "Београд" },
+                                                "ua-kiev": { "name": "Київ" },
+                                                "mk-skopje": { "name": "Скопје" },
+                                                "bg-sofia": { "name": "София" },
+                                                "il-jerusalem": { "name": "ירושלים" },
+                                                });
+        </script>
+    
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-3 sidebar">
+                <!-- menu, pers. info & stats -->
+                <!-- ngInclude: undefined --><ng-include src="'userView.html'" class="ng-scope"><div id="profile" ng-controller="UserCtrl" class="ng-scope">
+                    <div class="row username">
+                        <h2 class="text-center ng-binding">andras.hatvani</h2>
+                    </div>
+                    
+                    <!-- ngInclude: undefined --><ng-include src="'statsView.html'" class="ng-scope"><div class="row stats ng-scope" id="stats" ng-controller="StatsCtrl">
+                        <ul class="list-unstyled">
+                            <li class="ng-binding">
+                                319&nbsp;<span class="unit">km</span><br>
+                                <label>Distance</label>
+                            </li>
+                            <!-- todo <li>
+                             {{ userStats.… | … }}&nbsp;<span class="unit">…</span><br>
+                             <label>Time</label>
+                             <ul class="list-inline text-center">
+                             <li>3&nbsp;<abbr title="…">Months</abbr></li>
+                             <li>2&nbsp;<abbr title="…">Days</abbr></li>
+                             <li>10&nbsp;<abbr title="…">Hours</abbr></li>
+                             </ul>
+                             </li>-->
+                            <li class="ng-binding">
+                                18.0&nbsp;<span class="unit">km/h</span><br>
+                                <label>Average Speed</label>
+                            </li>
+                            <li class="ng-binding">
+                                40<br>
+                                <label>Tracks</label>
+                            </li>
+                        </ul>
+                    </div></ng-include>
+                    
+                    <div class="row account">
+                        <ul class="list-unstyled">
+                            <li><a target="_self" href="/users/sign_out" class="logout">log out</a></li>
+                            <li><a target="_self" href="/users/edit" class="account">my account</a></li>
+                        </ul>
+                    </div>
+                    <a href="//www.bikecitizens.net"><img src="/assets/bikecitizens-f12f601ca1af7b5a02ad0b41915e37d8.svg" class="logo"></a>
+                </div></ng-include>
+                
+            </div>
+            <div class="col-xs-12 col-md-9 col-md-offset-3 content">
+                <div id="header">
+                    <!-- ngInclude: undefined --><ng-include src="'menuView.html'" class="ng-scope"><div id="menu" class="row ng-scope" ng-controller="MenuCtrl">
+                        <ul class="list-inline menu">
+                            <li><a href="welcome" ng-class="{active: isActive('welcome')}" class="">Welcome</a></li>
+                            <li class="stats"><a href="stats" ng-class="{active: isActive('stats')}">Stats</a></li>
+                            <li><a href="tracklist" ng-class="{active: isActive('tracklist')}" class="active">Tracklist</a></li>
+                            <li><a href="heatmap" ng-class="{active: isActive('heatmap')}">Heatmap</a></li>
+                        </ul>
+                    </div></ng-include>
+                    
+                    <!--<p class="notice alert alert-info">Signed in successfully.</p>-->
+                    
+                    
+                </div>
+                <div class="loading-spiner-holder" data-loading="">
+                    <div class="loading-spiner ng-hide" ng-show="isLoading()">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA0MCA0MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEuNDE0MjE7IiB4PSIwcHgiIHk9IjBweCI+CiAgICA8ZGVmcz4KICAgICAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWwogICAgICAgICAgICBALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7CiAgICAgICAgICAgICAgZnJvbSB7CiAgICAgICAgICAgICAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIHRvIHsKICAgICAgICAgICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoLTM1OWRlZykKICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgQGtleWZyYW1lcyBzcGluIHsKICAgICAgICAgICAgICBmcm9tIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIHRvIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKC0zNTlkZWcpCiAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIHN2ZyB7CiAgICAgICAgICAgICAgICAtd2Via2l0LXRyYW5zZm9ybS1vcmlnaW46IDUwJSA1MCU7CiAgICAgICAgICAgICAgICAtd2Via2l0LWFuaW1hdGlvbjogc3BpbiAxLjVzIGxpbmVhciBpbmZpbml0ZTsKICAgICAgICAgICAgICAgIC13ZWJraXQtYmFja2ZhY2UtdmlzaWJpbGl0eTogaGlkZGVuOwogICAgICAgICAgICAgICAgYW5pbWF0aW9uOiBzcGluIDEuNXMgbGluZWFyIGluZmluaXRlOwogICAgICAgICAgICB9CiAgICAgICAgXV0+PC9zdHlsZT4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJvdXRlciI+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCwwQzIyLjIwNTgsMCAyMy45OTM5LDEuNzg4MTMgMjMuOTkzOSwzLjk5MzlDMjMuOTkzOSw2LjE5OTY4IDIyLjIwNTgsNy45ODc4MSAyMCw3Ljk4NzgxQzE3Ljc5NDIsNy45ODc4MSAxNi4wMDYxLDYuMTk5NjggMTYuMDA2MSwzLjk5MzlDMTYuMDA2MSwxLjc4ODEzIDE3Ljc5NDIsMCAyMCwwWiIgc3R5bGU9ImZpbGw6YmxhY2s7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNNS44NTc4Niw1Ljg1Nzg2QzcuNDE3NTgsNC4yOTgxNSA5Ljk0NjM4LDQuMjk4MTUgMTEuNTA2MSw1Ljg1Nzg2QzEzLjA2NTgsNy40MTc1OCAxMy4wNjU4LDkuOTQ2MzggMTEuNTA2MSwxMS41MDYxQzkuOTQ2MzgsMTMuMDY1OCA3LjQxNzU4LDEzLjA2NTggNS44NTc4NiwxMS41MDYxQzQuMjk4MTUsOS45NDYzOCA0LjI5ODE1LDcuNDE3NTggNS44NTc4Niw1Ljg1Nzg2WiIgc3R5bGU9ImZpbGw6cmdiKDIxMCwyMTAsMjEwKTsiLz4KICAgICAgICA8L2c+CiAgICAgICAgPGc+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMCwzMi4wMTIyQzIyLjIwNTgsMzIuMDEyMiAyMy45OTM5LDMzLjgwMDMgMjMuOTkzOSwzNi4wMDYxQzIzLjk5MzksMzguMjExOSAyMi4yMDU4LDQwIDIwLDQwQzE3Ljc5NDIsNDAgMTYuMDA2MSwzOC4yMTE5IDE2LjAwNjEsMzYuMDA2MUMxNi4wMDYxLDMzLjgwMDMgMTcuNzk0MiwzMi4wMTIyIDIwLDMyLjAxMjJaIiBzdHlsZT0iZmlsbDpyZ2IoMTMwLDEzMCwxMzApOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTI4LjQ5MzksMjguNDkzOUMzMC4wNTM2LDI2LjkzNDIgMzIuNTgyNCwyNi45MzQyIDM0LjE0MjEsMjguNDkzOUMzNS43MDE5LDMwLjA1MzYgMzUuNzAxOSwzMi41ODI0IDM0LjE0MjEsMzQuMTQyMUMzMi41ODI0LDM1LjcwMTkgMzAuMDUzNiwzNS43MDE5IDI4LjQ5MzksMzQuMTQyMUMyNi45MzQyLDMyLjU4MjQgMjYuOTM0MiwzMC4wNTM2IDI4LjQ5MzksMjguNDkzOVoiIHN0eWxlPSJmaWxsOnJnYigxMDEsMTAxLDEwMSk7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMy45OTM5LDE2LjAwNjFDNi4xOTk2OCwxNi4wMDYxIDcuOTg3ODEsMTcuNzk0MiA3Ljk4NzgxLDIwQzcuOTg3ODEsMjIuMjA1OCA2LjE5OTY4LDIzLjk5MzkgMy45OTM5LDIzLjk5MzlDMS43ODgxMywyMy45OTM5IDAsMjIuMjA1OCAwLDIwQzAsMTcuNzk0MiAxLjc4ODEzLDE2LjAwNjEgMy45OTM5LDE2LjAwNjFaIiBzdHlsZT0iZmlsbDpyZ2IoMTg3LDE4NywxODcpOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTUuODU3ODYsMjguNDkzOUM3LjQxNzU4LDI2LjkzNDIgOS45NDYzOCwyNi45MzQyIDExLjUwNjEsMjguNDkzOUMxMy4wNjU4LDMwLjA1MzYgMTMuMDY1OCwzMi41ODI0IDExLjUwNjEsMzQuMTQyMUM5Ljk0NjM4LDM1LjcwMTkgNy40MTc1OCwzNS43MDE5IDUuODU3ODYsMzQuMTQyMUM0LjI5ODE1LDMyLjU4MjQgNC4yOTgxNSwzMC4wNTM2IDUuODU3ODYsMjguNDkzOVoiIHN0eWxlPSJmaWxsOnJnYigxNjQsMTY0LDE2NCk7Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxnPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYuMDA2MSwxNi4wMDYxQzM4LjIxMTksMTYuMDA2MSA0MCwxNy43OTQyIDQwLDIwQzQwLDIyLjIwNTggMzguMjExOSwyMy45OTM5IDM2LjAwNjEsMjMuOTkzOUMzMy44MDAzLDIzLjk5MzkgMzIuMDEyMiwyMi4yMDU4IDMyLjAxMjIsMjBDMzIuMDEyMiwxNy43OTQyIDMzLjgwMDMsMTYuMDA2MSAzNi4wMDYxLDE2LjAwNjFaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNzQsNzQpOyIvPgogICAgICAgIDwvZz4KICAgICAgICA8Zz4KICAgICAgICAgICAgPHBhdGggZD0iTTI4LjQ5MzksNS44NTc4NkMzMC4wNTM2LDQuMjk4MTUgMzIuNTgyNCw0LjI5ODE1IDM0LjE0MjEsNS44NTc4NkMzNS43MDE5LDcuNDE3NTggMzUuNzAxOSw5Ljk0NjM4IDM0LjE0MjEsMTEuNTA2MUMzMi41ODI0LDEzLjA2NTggMzAuMDUzNiwxMy4wNjU4IDI4LjQ5MzksMTEuNTA2MUMyNi45MzQyLDkuOTQ2MzggMjYuOTM0Miw3LjQxNzU4IDI4LjQ5MzksNS44NTc4NloiIHN0eWxlPSJmaWxsOnJnYig1MCw1MCw1MCk7Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K" style="position:absolute; top:50%; left:50%;">
+                            </div>
+                </div>
+                <!-- content (activity, trending, city stats, …) -->
+                <!-- ngView:  --><div ng-view="" class="ng-scope"><div class="row ng-scope" id="activity">
+                    <!--<div class="filter form-inline">
+                     <span class="glyphicon glyphicon-search"></span>
+                     &ensp;
+                     <div class="input-group input-daterange">
+                     <input type="text" class="form-control" value="" ng-model="query_date_start">
+                     <span class="input-group-addon">-</span>
+                     <input type="text" class="form-control" value="" ng-model="query_date_end">
+                     </div>
+                     <select class="form-control" ng-model="query_city">
+                     <option value="*">all</option>
+                     <option ng-repeat="city in trackCities track by city.cccode" value="{{city.cccode}}">{{city.name}}</option>
+                     </select>
+                     </div>-->
+                    <!-- ngIf: tracksLoaded && tracks.length == 0 -->
+                    <ul class="list-unstyled tracklist">
+                        <!-- ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    15.9&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    44&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.6&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 11, 2017 2:27:08 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    2.0&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    6&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.2&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 11, 2017 2:20:21 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    7.9&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    24.6&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 11, 2017 1:53:21 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    5.1&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    24&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    12.7&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 11, 2017 10:47:58 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    10.0&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    23&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    26.7&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 11, 2017 10:18:23 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    34&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.8&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 9, 2017 3:40:26 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    36&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    20.7&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 9, 2017 6:24:30 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.9&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    14&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 8, 2017 3:52:35 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    3.6&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    9&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    23.5&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 8, 2017 3:31:24 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    3.9&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    7&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    31.5&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 8, 2017 8:24:31 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.1&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    11&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    23.1&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 8, 2017 8:03:40 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.9&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    14&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    20.8&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 7, 2017 3:48:45 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    10.1&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    28&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.8&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 7, 2017 3:10:10 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    42&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    17.6&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 7, 2017 7:04:48 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    3.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    9&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    23.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 6, 2017 3:46:18 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.6&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    13&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    20.9&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 6, 2017 3:23:29 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    5.0&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    13&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    23.2&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 6, 2017 8:23:15 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.2&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    16&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    15.8&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 6, 2017 7:56:50 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    34&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.9&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 1, 2017 3:11:21 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    38&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19.9&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">Jun 1, 2017 6:40:43 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.2&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    37&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19.9&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 31, 2017 3:11:40 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.6&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    39&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19.3&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 31, 2017 6:22:56 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    11.9&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    32&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    22.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 30, 2017 3:00:58 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    37&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    20.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 30, 2017 6:11:22 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    7.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 28, 2017 10:12:18 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    3.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    7&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    28.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 28, 2017 9:38:35 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    5.0&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    24&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 28, 2017 9:13:15 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    37&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    20.3&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 24, 2017 3:28:17 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    15&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    18.0&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 23, 2017 3:45:40 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    9.8&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    31&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19.0&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 23, 2017 3:00:30 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    10.1&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    35&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    17.0&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 23, 2017 8:07:23 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    5.0&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    14&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    21.3&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 22, 2017 3:23:21 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    1.6&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    4&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    24.2&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 20, 2017 5:58:36 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    1.7&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    6&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    17.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 20, 2017 5:21:21 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.0&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    9&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    26.4&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 19, 2017 4:15:30 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    4.8&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    16&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    18.5&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 19, 2017 2:49:46 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    39&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19.1&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 17, 2017 3:42:28 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    38&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    19.7&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 17, 2017 6:45:16 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    11.4&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    37&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    18.5&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 16, 2017 3:45:37 PM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city --><li ng-repeat="track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city" ng-click="toggleTrackDetails(track.id)" class="ng-scope">
+                            <ul class="list-inline">
+                                <li class="ng-binding">
+                                    12.5&nbsp;<span class="unit">km</span><br>
+                                    <label>Distance</label>
+                                </li>
+                                <li class="ng-binding">
+                                    42&nbsp;<span class="unit">min</span><br>
+                                    <label>Time</label>
+                                </li>
+                                <li class="ng-binding">
+                                    18.0&nbsp;<span class="unit">km/h</span><br>
+                                    <label>Speed</label>
+                                </li>
+                            </ul>
+                            <h3 class="ng-binding">Track in Wien</h3>
+                            <p class="date ng-binding">May 16, 2017 7:58:48 AM</p>
+                            <!-- ngIf: shouldShowDetails(track.id) -->
+                        </li><!-- end ngRepeat: track in tracks | filter_daterangeCity:query_date_start:query_date_end:query_city -->
+                    </ul>
+                </div></div>
+                
+                <div id="footer">
+                    © 2016 Bike Citizens <!-- todo: blabla -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+</body></html>
