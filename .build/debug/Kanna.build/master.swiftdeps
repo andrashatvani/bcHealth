@@ -1,0 +1,9 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.43 clang-900.0.22.8)"
+options: "1990dce91437fb2c4a31348e2402bd2c"
+build_time: [1497161882, 46871000]
+inputs:
+  "/Users/andras/Development/Xcode/bcHealth/.build/checkouts/Kanna.git-4480671543299714050/Sources/Kanna/CSS.swift": [1497161443, 0]
+  "/Users/andras/Development/Xcode/bcHealth/.build/checkouts/Kanna.git-4480671543299714050/Sources/Kanna/Kanna.swift": [1497161443, 0]
+  "/Users/andras/Development/Xcode/bcHealth/.build/checkouts/Kanna.git-4480671543299714050/Sources/Kanna/libxmlHTMLDocument.swift": [1497161443, 0]
+  "/Users/andras/Development/Xcode/bcHealth/.build/checkouts/Kanna.git-4480671543299714050/Sources/Kanna/libxmlHTMLNode.swift": [1497161443, 0]
+  "/Users/andras/Development/Xcode/bcHealth/.build/checkouts/Kanna.git-4480671543299714050/Sources/Kanna/libxmlParserOption.swift": [1497161443, 0]

@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/master.swiftdeps"
+  },
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/AppDelegate.swift": {
+    "dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/AppDelegate.d",
+    "object": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/AppDelegate.swiftdeps"
+  },
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/Downloader.swift": {
+    "dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Downloader.d",
+    "object": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Downloader.swift.o",
+    "swiftmodule": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Downloader~partial.swiftmodule",
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Downloader.swiftdeps"
+  },
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/Parser.swift": {
+    "dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Parser.d",
+    "object": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Parser.swift.o",
+    "swiftmodule": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Parser~partial.swiftmodule",
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Parser.swiftdeps"
+  },
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/TableViewController.swift": {
+    "dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/TableViewController.d",
+    "object": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/TableViewController.swift.o",
+    "swiftmodule": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/TableViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/TableViewController.swiftdeps"
+  },
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/Track.swift": {
+    "dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Track.d",
+    "object": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Track.swift.o",
+    "swiftmodule": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Track~partial.swiftmodule",
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/Track.swiftdeps"
+  },
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/ViewController.swift": {
+    "dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/ViewController.d",
+    "object": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/ViewController.swift.o",
+    "swiftmodule": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/ViewController~partial.swiftmodule",
+    "swift-dependencies": "/Users/andras/Development/Xcode/bcHealth/.build/debug/bcHealth.build/ViewController.swiftdeps"
+  }
+}

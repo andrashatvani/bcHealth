@@ -1,0 +1,10 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.43 clang-900.0.22.8)"
+options: "02187c89715d7afcd7e7c7390fad0f3a"
+build_time: [1497162898, 869096000]
+inputs:
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/AppDelegate.swift": !dirty [1497020462, 0]
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/Downloader.swift": !dirty [1497032838, 0]
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/Parser.swift": !dirty [1497161176, 0]
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/TableViewController.swift": !dirty [1497103228, 0]
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/Track.swift": !dirty [1497123167, 0]
+  "/Users/andras/Development/Xcode/bcHealth/Sources/bcHealth/ViewController.swift": !dirty [1497122200, 0]
