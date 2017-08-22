@@ -1,14 +1,18 @@
 import Foundation
 import Kanna
+import SwiftyBeaver
 
 class Parser {
-    let dateFormatter:DateFormatter = {
+    public static let dateFormatter:DateFormatter = {
         let dateFormatter:DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd, yyyy hh:mm:ss a"
         return dateFormatter
     }()
     
     func parse(trackListHtml:String) throws -> ([Track], [Track]) {
+        let console = ConsoleDestination()
+        let log = SwiftyBeaver.self
+        log.addDestination(console)
         var completeTracks:[Track] = []
         var incompleteTracks:[Track] = []
         guard let doc:HTMLDocument = HTML(html: trackListHtml, encoding: .utf8) else {
@@ -21,11 +25,12 @@ class Parser {
             parseMetrics(element, &track)
             parseCity(element, &track)
             parseDate(element, &track)
-            print("Track: \(track)")
             if (track.isComplete()) {
                 completeTracks.append(track)
+                log.info("Track: \(track)")
             } else {
                 incompleteTracks.append(track)
+                log.warning("Track: \(track)")
             }
         }
         return (completeTracks, incompleteTracks)
@@ -62,7 +67,7 @@ class Parser {
     
     fileprivate func parseDate(_ element: XMLElement, _ track: inout Track) {
         if let rawDate:String = element .at_css("p")?.text {
-            track.date = dateFormatter.date(from: rawDate)
+            track.date = Parser.dateFormatter.date(from: rawDate)
         } else {
             print("Couldn't find date")
         }

@@ -1,12 +1,5 @@
-//
-//  bcHealthUITests.swift
-//  bcHealthUITests
-//
-//  Created by Andras on 09/06/2017.
-//  Copyright © 2017 Andras Hatvani. All rights reserved.
-//
-
 import XCTest
+@testable import bcHealth
 
 class bcHealthUITests: XCTestCase {
         
@@ -29,6 +22,15 @@ class bcHealthUITests: XCTestCase {
     }
     
     func testExample() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let trackTableViewController = storyboard.instantiateViewController(withIdentifier: "TrackTableViewController") as! TrackTableViewController
+        let path:String? = Bundle(for: type(of: self)).path(forResource: "oneIncomplete", ofType: "html", inDirectory: "trackLists")
+        let contents = try! String(contentsOfFile: path!)
+        let parser = Parser()
+        
+        let (completeTracks, incompleteTracks) = try! parser.parse(trackListHtml: contents)
+        
+        (trackTableViewController.completeTracks, trackTableViewController.incompleteTracks) = (completeTracks, incompleteTracks)
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

@@ -2,8 +2,8 @@ import UIKit
 import WebKit
 
 class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
-
     var webView: WKWebView!
+    let parser: Parser = Parser()
     
     @IBOutlet weak var importButton: UIButton!
     
@@ -28,9 +28,19 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? TrackTableViewController {
+            webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
+                                       completionHandler:{ (html: Any?, error: Error?) in (destination.completeTracks, destination.incompleteTracks) = try! self.parser.parse(trackListHtml: html as! String) })
+            
+        }
+    }
+    
     func importPressed () {
-        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()", completionHandler:
-            { (html: Any?, error: Error?) in print(html!) })
+//        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()", completionHandler:
+//            { (html: Any?, error: Error?) in print(html!) })
+//        webView.evaluateJavaScript("angular.injector(['ng', 'bc-preloaded']).get('BC_CITIES')", completionHandler:
+//            { (html: Any?, error: Error?) in print(html!) })
     }
 
 }
